@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Hangman</title>
+	<title>The Big Lebowski Hangman</title>
+	
+	<!-- BOOTSTRAP Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
+
 <body>
-
-	<div id="game">
-		
-		<h1>Hangman</h1>
-		
-		<h2>Press any key to get started!</h2>
-		
-		<p>Current Word</p>
-		<span id="currentWord"></span>
-
-		<p>Number of Guesses Remaining: </p><span id="guessRemain"></span>
-
-		<p>Letters Already Guessed: </p><span id="alreadyGuessed"></span>
-	
-		<p>Wins : </p><span id="wins"></span>
-	
-		<p>Losses : </p><span id="losses"></span>
-		
+	<div class="container" id="mainDiv">
+		<div class="row">
+		<div class="row">
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4">
+				<div class="container" id="game">
+					<h1>The Big Lebowski</h1>
+					<h1>Hangman Game</h1>
+					<h2>Press any key to get started!</h2>	
+					<p>Current Word</p><span id="currentWord"></span>
+					<p>Number of Guesses Remaining: </p><span id="guessRemain"></span>
+					<p>Letters Already Guessed : </p><span id="alreadyGuessed"></span>
+					<p>Strikes : </p><span id="wins"></span>
+					<p>Gutters : </p><span id="losses"></span>
+				</div>
+			</div>
+			<div class="col-xs-4"></div>
+		</div>
+		</div>
 	</div>
 
 	<script src="assets/javascript/game.js"></script>
 </body>
+
 </html>

@@ -1,8 +1,3 @@
-// on start up computer takes random word and displays it with blanks
-// user guesses letter and either goes into random word or goes into letters already guessed
-// if user guesses too many times its end of game and start over.
-// if user keeps guessing and guesses all letters in word user wins and song plays.
-// start game over again.
 
 // ******************* GLOBAL VARIABLES **************
 // arrays
@@ -16,7 +11,7 @@ var wrongGuesses = [];
 // game counters
 var wins = 0;
 var losses = 0;
-var guessRemain = answer.length + 10;
+var guessRemain = 0;
 
 // ************************** FUNCTIONS ***************
 
@@ -26,7 +21,7 @@ function startGame() {
 	answerCount = lettersInAnswer.length;
 
 	// reset
-	guessRemain = answer.length + 10;
+	guessRemain = answer.length + 5;
 	wrongGuesses = [];
 	lettersAndBlanks = [];
 
@@ -41,12 +36,6 @@ function startGame() {
 	document.getElementById("alreadyGuessed").innerHTML = wrongGuesses;
 	document.getElementById("wins").innerHTML = wins;
 	document.getElementById("losses").innerHTML = losses;
-
-
-	console.log(answer);
-	console.log(lettersInAnswer);
-	console.log(answerCount);
-	console.log(lettersAndBlanks);
 	
 }
 
@@ -74,7 +63,6 @@ function checkLetters(letter) {
 		guessRemain--;
 	}
 
-	console.log(lettersAndBlanks);
 }
 
 function completeRound() {
@@ -86,7 +74,7 @@ function completeRound() {
 	// check if user won
 	if (lettersInAnswer.toString() === lettersAndBlanks.toString()) {
 		wins++;
-		alert("You Won!");
+		alert("You Won! The word was " + answer);
 		// update HTML
 		document.getElementById("wins").innerHTML = wins;
 
@@ -96,7 +84,7 @@ function completeRound() {
 	// check if user lost
 	else if (guessRemain === 0) {
 		losses++;
-		alert("You Lost");
+		alert("Sorry, You Lost. The correct answer was " + answer);
 
 		// update HTML
 		document.getElementById("losses").innerHTML = losses;
@@ -117,8 +105,6 @@ document.onkeyup = function(event) {
 	var userInput = String.fromCharCode(event.keyCode).toLowerCase();
 	checkLetters(userInput);
 	completeRound();
-
-	console.log(userInput);
 }
 
 
