@@ -79,6 +79,7 @@ function completeRound() {
 		wins++;
 		document.getElementById("winAnswer").innerHTML = answer;
 		$('#winModal').modal();
+		
 		// update HTML
 		document.getElementById("wins").innerHTML = wins;
 
