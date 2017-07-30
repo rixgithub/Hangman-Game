@@ -1,7 +1,10 @@
 
 // ******************* GLOBAL VARIABLES **************
 // arrays
-var words = ["rug", "bowling", "dude", "ransom"];
+var words = ["rug", "bowling", "dude", "ransom", "bunny", "tumbleweed", "lazy", "aggression", "money", "bunny", "rocks", "element", "chinaman", "millionaire", "achiever", "bums",
+ "pomeranian", "rules", "fragile", "asshole", "smokey", "bummer", "beeper", "lenin", "walrus", "vietnam", "roll", "jesus", "dylan", "creedence", "whites", "amateurs", "uzi", "ringer", 
+ "kidnap", "shabbos", "vaginal", "johnson", "coitus", "nihilist", "pornography", "treehorn", "beverage", "toe", "marmot", "abutment", "sarsaparilla", "beaver", "in-n-out", "vette", 
+ "malibu", "branded", "deadbeat", "eagles", "reactionary", "hungus", "donny", "walter", "abides"];
 var answer = "";
 var lettersInAnswer = [];
 var lettersAndBlanks = [];
@@ -74,7 +77,8 @@ function completeRound() {
 	// check if user won
 	if (lettersInAnswer.toString() === lettersAndBlanks.toString()) {
 		wins++;
-		alert("You Won! The word was " + answer);
+		document.getElementById("winAnswer").innerHTML = answer;
+		$('#winModal').modal();
 		// update HTML
 		document.getElementById("wins").innerHTML = wins;
 
@@ -84,7 +88,8 @@ function completeRound() {
 	// check if user lost
 	else if (guessRemain === 0) {
 		losses++;
-		alert("Sorry, You Lost. The correct answer was " + answer);
+		document.getElementById("loseAnswer").innerHTML = answer;
+		$('#loseModal').modal();
 
 		// update HTML
 		document.getElementById("losses").innerHTML = losses;
@@ -106,14 +111,5 @@ document.onkeyup = function(event) {
 	checkLetters(userInput);
 	completeRound();
 }
-
-
-
-
-
-
-
-
-
 
 

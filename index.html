@@ -7,31 +7,86 @@
 	<!-- BOOTSTRAP Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- JQuery -->
+	<script
+	  src="http://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	<!-- BOOTSTRAP Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Sancreek|Smokum" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-	<div class="container" id="mainDiv">
-		<div class="row">
-		<div class="row">
-			<div class="col-xs-4"></div>
-			<div class="col-xs-4">
-				<div class="container" id="game">
-					<h1>The Big Lebowski</h1>
-					<h1>Hangman Game</h1>
-					<h2>Press any key to get started!</h2>	
-					<p>Current Word</p><span id="currentWord"></span>
-					<p>Number of Guesses Remaining: </p><span id="guessRemain"></span>
-					<p>Letters Already Guessed : </p><span id="alreadyGuessed"></span>
-					<p>Strikes : </p><span id="wins"></span>
-					<p>Gutters : </p><span id="losses"></span>
-				</div>
-			</div>
-			<div class="col-xs-4"></div>
-		</div>
-		</div>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>The Big Lebowski Hangman Game</h1>
+	  </div>
 	</div>
+	
+	<div class="container" id="mainDiv">
+		<div class="row" id="gameRow">	
+			<div class="container col-xs-3" id="game">			
+				<h2>Press any key to get started!</h2>
+				<br>
+				<br>
+				<p>Number of Guesses Remaining: </p><span id="guessRemain"></span>
+				<br>
+				<br>
+				<p>Letters Already Guessed : </p><span id="alreadyGuessed"></span>
+			</div>
+			<div class="col-xs-3"></div>
+			<div class="col-xs-3"></div>
+			<div class="col-xs-3" id="points">
+				<p>Strikes : </p><span id="wins"></span>
+				<br>
+				<br>
+				<p>Gutters : </p><span id="losses"></span>
+			</div>
+		</div>
+		
+		<div class="row" id="wordRow">
+			<div class="col-xs-12" id="word">
+				<span id="currentWord"></span>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- win Modal -->
+	<div class="modal fade" id="winModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        You Won! The word was <span id="winAnswer"></span>.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<!-- lose Modal -->
+    <div class="modal fade" id="loseModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        You Lost. The word was <span id="loseAnswer"></span>.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
 	<script src="assets/javascript/game.js"></script>
 </body>
