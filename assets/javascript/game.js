@@ -78,7 +78,9 @@ function completeRound() {
 	if (lettersInAnswer.toString() === lettersAndBlanks.toString()) {
 		wins++;
 		document.getElementById("winAnswer").innerHTML = answer;
-		$('#winModal').modal('show');
+
+		alert('You win');
+		// $('#winModal').modal('show');
 		
 		// update HTML
 		document.getElementById("wins").innerHTML = wins;
@@ -89,7 +91,9 @@ function completeRound() {
 	else if (guessRemain === 0) {
 		losses++;
 		document.getElementById("loseAnswer").innerHTML = answer;
-		$('#loseModal').modal('show');
+		
+		alert('You lose');
+		// $('#loseModal').modal('show');
 
 		// update HTML
 		document.getElementById("losses").innerHTML = losses;
