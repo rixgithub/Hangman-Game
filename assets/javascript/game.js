@@ -78,8 +78,8 @@ function completeRound() {
 	if (lettersInAnswer.toString() === lettersAndBlanks.toString()) {
 		wins++;
 
-		document.getElementById("winAnswer").innerHTML = answer;
-		$('#winModal').modal();
+		// document.getElementById("winAnswer").innerHTML = answer;
+		// $('#winModal').modal();
 		
 		// update HTML
 		document.getElementById("wins").innerHTML = wins;
@@ -90,8 +90,8 @@ function completeRound() {
 	else if (guessRemain === 0) {
 		losses++;
 
-		document.getElementById("loseAnswer").innerHTML = answer;
-		$('#loseModal').modal();
+		// document.getElementById("loseAnswer").innerHTML = answer;
+		// $('#loseModal').modal();
 
 		// update HTML
 		document.getElementById("losses").innerHTML = losses;
