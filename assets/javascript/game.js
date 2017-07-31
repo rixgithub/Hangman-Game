@@ -59,11 +59,13 @@ function checkLetters(letter) {
 				lettersAndBlanks[i] = letter;
 			}
 		}
+		completeRound();
 	}
 	 // letter was not found in answer
 	else {
 		wrongGuesses.push(letter);
 		guessRemain--;
+		completeRound();
 	}
 
 }
@@ -110,7 +112,6 @@ startGame();
 document.onkeyup = function(event) {
 	var userInput = String.fromCharCode(event.keyCode).toLowerCase();
 	checkLetters(userInput);
-	completeRound();
 }
 
 
