@@ -1,8 +1,10 @@
-body, html {
+body {
     height: 100%;
+    width: 100%;
 }
 
 .jumbotron {
+    border-radius: 0px;
 	background-image: url('../images/jumbo.png');
 	   /* Center and scale the image nicely */
 	background-position: center;
@@ -10,10 +12,19 @@ body, html {
     background-size: cover;
     padding: 0;
     overflow: hidden;
+       /*---------------------------------*/
     margin-bottom: 0;
     font-family: 'Sancreek', cursive;
 	text-align: center;
 	color: white;
+
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -44,31 +55,34 @@ h2 {
 
 p {
 	color: white;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 #game {
 	color: white;
-	font-size: 20px;
+	font-size: 30px;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
 }
 
 #points {
  	color: white;
- 	font-size: 20px;
+ 	font-size: 30px;
 }
 
 #gameRow {
 	margin-left: 10px;
- 	margin-bottom: 325px;
-}
-
-#currentWord {
- 	font-size: 90px;
- 	color: white;
 }
 
 #word {
 	text-align: center;
+    font-family: 'Smokum', cursive;
+    font-size: 200px;
+    color: white;
+    overflow: auto;
 }
 
 .modal-content {
@@ -86,7 +100,7 @@ p {
 
 .modal-body {
 	color: white;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 

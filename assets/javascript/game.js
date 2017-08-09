@@ -1,5 +1,4 @@
 
-
 // ******************* GLOBAL VARIABLES **************
 // arrays
 var words = ["rug", "bowling", "dude", "ransom", "bunny", "tumbleweed", "lazy", "aggression", "money", "bunny", "rocks", "element", "chinaman", "millionaire", "achiever", "bums",
