@@ -1,4 +1,9 @@
-body html {
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
     height: 100%;
     width: 100%;
 }
@@ -76,19 +81,19 @@ p {
 
 @media screen and (max-width: 610px) {
     h2 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     #game {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #points {
-        font-size: 15px;
+        font-size: 20px;
     }
     
     p {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #word {
