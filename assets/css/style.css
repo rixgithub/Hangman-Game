@@ -1,4 +1,4 @@
-body {
+body html {
     height: 100%;
     width: 100%;
 }
@@ -21,14 +21,6 @@ body {
 }
 
 #wrapper {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-
-#mainDiv {
 	background-image: url('../images/mainImage.jpg');
 	 /* Full height */
     height: 100%; 
@@ -50,7 +42,8 @@ h1 {
 }
 
 h2 {
-	color: white;
+    color: white;
+    font-size: 40px;
 }
 
 p {
@@ -61,11 +54,6 @@ p {
 #game {
 	color: white;
 	font-size: 30px;
-}
-
-h2 {
-    color: white;
-    font-size: 40px;
 }
 
 #points {
@@ -83,6 +71,29 @@ h2 {
     font-size: 200px;
     color: white;
     overflow: auto;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 610px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    #game {
+        font-size: 15px;
+    }
+
+    #points {
+        font-size: 15px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+
+    #word {
+        font-size: 100px;
+    }
 }
 
 .modal-content {
